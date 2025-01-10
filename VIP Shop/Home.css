@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+:root {
+    --white-clr: #fff;
+    --bg-purple: #23212e;
+    --text-purple: #f1f1f1;
+    --primary-purple: #9984ee;
+    --secondary-purple: #6f4ef4;
+}
+
+.product-container {
+    background: var(--bg-purple);
+    height: 100vh;
+    padding-inline: 6rem;
+    padding: 0 2rem;
+    isolation: isolate;
+}
+
+.navbar {
+    display: flex;
+    height: 13vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    border-bottom: 1px solid var(--text-purple);
+}
+
+.navlist {
+    display: flex;
+    gap: 2rem;
+}
+
+/* start line the colour effect */
+.navlist .links {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+.navlist .links::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transform: translateX(-50%);
+    transform-origin: center;
+    transition: width 0.3s ease;
+}
+
+.navlist .links:hover::after {
+    width: 100%;
+}
+
+.navlist a:hover {
+    color: var(--primary-purple);
+}
+
+/* upto line */
+
+.hero-section {
+    height: calc(100vh - 13vh);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image-container {
+    width: 35rem;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--primary-purple);
+    font-weight: 700;
+}
+
+.logo span {
+    color: white;
+}
+
+.links {
+    color: var(--text-purple);
+}
+
+.button {
+    background: var(--primary-purple);
+    border: none;
+    size: 12rem;
+    color: var(--white-clr);
+    padding: .8rem 2rem;
+    border-radius: 5rem;
+    font-size: 1rem;
+}
+
+.button:hover {
+    transform: scale(1.02);
+}
+
+.content {
+    max-width: 550px;
+    margin-left: 4rem;
+    margin-bottom: 4rem;
+}
+
+.content h1 {
+    font-size: 4rem;
+    background: linear-gradient(45deg, var(--white-clr), var(--primary-purple));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content p {
+    color: var(--text-purple);
+    font-size: 1rem;
+    margin: 1rem 0 2rem 0;
+    text-wrap: balance;
+}
+
+.image-container::before {
+    content: '';
+    background: var(--primary-purple);
+    width: 25rem;
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(33%, -42%);
+    filter: blur(100px);
+    z-index: -1;
+}
+
+.image-container::after {
+    content: '';
+    position: absolute;
+    width: 20rem;
+    aspect-ratio: 1;
+    background: var(--primary-purple);
+    border-radius: 50%;
+    right: 85px;
+    top: 21%;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:680px) {
+    .navlist {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--secondery-purple);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 17rem;
+        z-index: 5;
+        transform: translate(-100%);
+    }
+
+    .navbar button {
+        display: none;
+    }
+
+    .links {
+        color: var(--secondery-purple);
+    }
+
+    .logo {
+        z-index: 6;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .product-container {
+        padding-inline: 2rem;
+    }
+
+    .hero-section {
+        flex-direction: column;
+    }
+
+    .content h1 {
+        font-size: 3.2px;
+    }
+
+    content {
+        margin-top: 3rem;
+    }
+
+    .image-container {
+        width: 25rem;
+    }
+
+    .image-container::after {
+        width: 12rem;
+    }
+
+    .image-container::before {
+        width: 15rem;
+    }
+}

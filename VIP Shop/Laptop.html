@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Shop</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        :root {
+            --white-clr: #fff;
+            --bg-purple: #23212e;
+            --text-purple: #f1f1f1;
+            --primary-purple: #9984ee;
+            --secondary-purple: #6f4ef4;
+        }
+
+        .product-Chamber {
+            background: var(--bg-purple);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 2rem;
+        }
+
+        .navbar {
+            display: flex;
+            height: 13vh;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            border-bottom: 1px solid var(--text-purple);
+        }
+
+        .navlist {
+            display: flex;
+            gap: 3.2rem;
+            list-style: none;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: var(--primary-purple);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        .navlist a {
+            color: var(--white-clr);
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-size: 18px;
+        }
+
+        .button {
+            background: var(--primary-purple);
+            border: none;
+            color: var(--white-clr);
+            padding: .8rem 2rem;
+            border-radius: 5rem;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            transform: scale(1.02);
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
+            margin: 6px auto;
+            width: 91%;
+            max-width: 1211px;
+
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: scale(1.02);
+        }
+
+        .product-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-content {
+            flex: 1;
+            color: var(--white-clr);
+        }
+
+        .product-content h2 {
+            font-size: 24px;
+            color: var(--primary-purple);
+        }
+
+        .product-content p {
+            color: var(--text-purple);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 1rem;
+            }
+
+            .navlist {
+                display: none;
+            }
+
+
+            .product {
+                flex-direction: column;
+            }
+
+            .reverse {
+                flex-direction: column;
+            }
+
+            .product-image img {
+                max-width: 45%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-Chamber">
+        <nav class="navbar">
+            <a href="#" class="logo">VIP <span>Shop</span></a>
+            <ul class="navlist">
+                <li><a href="Home.html" class="links">Home</a></li>
+                <li><a href="Categories.html" class="links">Categories</a></li>
+                <li><a href="product.html" class="links">Product</a></li>
+                <li><a href="Profile.html" class="links">Profile</a></li>
+            </ul>
+            <a href="signup.html" class="button">Sign Up</a>
+
+        </nav>
+
+        <div class="product-container">
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/718zbAOG7HL._SL1500_.jpg" alt="">
+                </div>
+                <div class="product-content">
+                    <h2>HP Victus</h2>
+                    <p>HP Victus Special Edition,12Th Gen Intel Core I5-12450H,Windows 11 Home 4Gb RTX 3050A
+                        Gpu,15.6-Inch(39.6 Cm),Fhd,IPS,144Hz,16Gb Ddr4,512Gb Ssd,Backlit Kb,9Ms Response
+                        Time(Mso,Blue,2.29 Kg),Fa1379Tx</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/81tmCrtiRgL._SL1500_.jpg" alt="">
+                </div>
+                <div class="product-content">
+                    <h2>Lenovo LOQ</h2>
+                    <p>Lenovo LOQ 2024 Intel Core i5-12450HX 15.6" (39.6cm) 144Hz 300Nits FHD IPS Gaming Laptop
+                        (24GB/512GB SSD/Win 11/NVIDIA RTX 3050 6GB Graphics/1Yr ADP Free/MSO 21/3 Mon Game
+                        Pass/Grey/2.4Kg), 83GS0098IN</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/71-Fx3Vfq5L._SL1500_.jpg" alt="">
+                </div>
+                <div class="product-content">
+                    <h2>ASUS TUF F15</h2>
+                    <p>ASUS TUF Gaming F15 - AI Powered Gaming Laptop, Intel Core i5-11400H 11th Gen, 15.6-inch (39.62
+                        cm) FHD 144Hz, (8GB/1TB/4GB NVIDIA RTX 2050/Win 11/Backlit KB/Black/2.30 kg),FX506HF-HN026W</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/816M6yAx34L._SL1500_.jpg" alt="">
+                </div>
+                <div class="product-content">
+                    <h2>ASUS TUF F17</h2>
+                    <p>ASUS TUF F17 Gaming Laptop, Core i5-11400H 11th Gen, 17.3-inch (43.94 cm) 144Hz, (8GB RAM/512GB
+                        SSD/4GB NVIDIA GeForce RTX 2050/Windows 11/ RGB Backlit KB/Black/2.30 kg), FX706HF-HX018W</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/81zAEcXFPOL._SL1500_.jpg" alt="">
+                </div>
+                <div class="product-content">
+                    <h2>Acer Nitro V</h2>
+                    <p>Acer Nitro V Gaming Laptop AMD Ryzen 7-7735HS with RTX 3050 6 GB Graphics (16 GB DDR5/512GB
+                        SSD/Windows 11 Home/Wi-Fi 6/144Hz) ANV15-41, 15.6" FHD Display, 2.1 KG</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/71DDL0p7n0L._SL1500_.jpg" alt="     ">
+                </div>
+                <div class="product-content">
+                    <h2>MSI Katana A15</h2>
+                    <p>MSI Katana A15 Ai, AMD Ryzen 7 8845Hs, Built-in Ai, 40Cm Fhd 144Hz Gaming Laptop(16Gb/512Gb Nvme
+                        Ssd/Windows 11 Home/Nvidia Geforce RTX 4050, Gddr6 6Gb/Black/2.25Kg), B8Ve-418In</p>
+                </div>
+            </div>
+                       
+        </div>
+    </div>
+
+</body>
+
+</html>

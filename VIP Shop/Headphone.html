@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Shop</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        :root {
+            --white-clr: #fff;
+            --bg-purple: #23212e;
+            --text-purple: #f1f1f1;
+            --primary-purple: #9984ee;
+            --secondary-purple: #6f4ef4;
+        }
+
+        .product-Chamber {
+            background: var(--bg-purple);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 2rem;
+        }
+
+        .navbar {
+            display: flex;
+            height: 13vh;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            border-bottom: 1px solid var(--text-purple);
+        }
+
+        .navlist {
+            display: flex;
+            gap: 3.2rem;
+            list-style: none;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: var(--primary-purple);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        .navlist a {
+            color: var(--white-clr);
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-size: 18px;
+        }
+
+        .button {
+            background: var(--primary-purple);
+            border: none;
+            color: var(--white-clr);
+            padding: .8rem 2rem;
+            border-radius: 5rem;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            transform: scale(1.02);
+        }
+
+        .product-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
+            margin: 6px auto;
+            width: 91%;
+            max-width: 1211px;
+
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: scale(1.02);
+        }
+
+        .product-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-content {
+            flex: 1;
+            color: var(--white-clr);
+        }
+
+        .product-content h2 {
+            font-size: 24px;
+            color: var(--primary-purple);
+        }
+
+        .product-content p {
+            color: var(--text-purple);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 1rem;
+            }
+
+            .navlist {
+                display: none;
+            }
+
+
+            .product {
+                flex-direction: column;
+            }
+
+            .reverse {
+                flex-direction: column;
+            }
+
+            .product-image img {
+                max-width: 45%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-Chamber">
+        <nav class="navbar">
+            <a href="#" class="logo">VIP <span>Shop</span></a>
+            <ul class="navlist">
+                <li><a href="Home.html" class="links">Home</a></li>
+                <li><a href="Categories.html" class="links">Categories</a></li>
+                <li><a href="product.html" class="links">Product</a></li>
+                <li><a href="Profile.html" class="links">Profile</a></li>
+            </ul>
+            <a href="signup.html" class="button">Sign Up</a>
+
+        </nav>
+
+        <div class="product-container">
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/61GywIq-pwL._SL1500_.jpg" alt="Laptops">
+                </div>
+                <div class="product-content">
+                    <h2>Gaming Headset</h2>
+                    <p>HyperX Cloud Stinger 2 Core Gaming Headset PS, 3.5mm Wired Connection, 40mm Sound Drivers,
+                        Lightweight, Over-Ear, Swivel-to-Mute mic, PlayStation-Licensed, Soft Foam Ear Cushion, White,
+                        275g, 6H9B5AA</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/51+SnSFNQaL._SL1000_.jpg" alt="Computer Accessories">
+                </div>
+                <div class="product-content">
+                    <h2>Gaming Headset</h2>
+                    <p>Zebronics Jet PRO Premium Wired Gaming On Ear Headphone with LED for Headband + earcups, 40mm
+                        Neodymium Drivers, 2 Meter Braided Cable, with mic, Suspension Design, 3.5mm + USB Connector
+                        (Black, Blue)</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/61Wyl9B6XxL._SL1500_.jpg" alt="Computer Accessories">
+                </div>
+                <div class="product-content">
+                    <h2>Gaming Headset</h2>
+                    <p>Zebronics Zeb-Blitz USB Gaming Wired Over Ear Headphones with Dolby Atmos, RGB LED, Windows
+                        Software, Simulated 7.1 Surround Sound, 2.4 Meter Braided Cable, Flexible mic, Ear Cushions with
+                        mic (White)</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/611zbNnYOdL._SL1500_.jpg" alt="Computer Accessories">
+                </div>
+                <div class="product-content">
+                    <h2>Gaming Headset</h2>
+                    <p>Sony INZONE H3, MDR-G300 Wired Gaming Headset, Over-Ear Headphones with 360 Spatial Sound, USB
+                        Wired Over-Ear Professional + USB Connector, flip to Mute mic, App Support & PC Compatible
+                        (White)</p>
+                </div>
+            </div>
+
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/61p2ypXtuEL._SL1500_.jpg" alt="Computer Accessories">
+                </div>
+                <div class="product-content">
+                    <h2>Gaming Headset</h2>
+                    <p>Explore our wide range of computer accessories designed to enhance your tech experience. Whether
+                        you’re a gamer, a professional, or a casual user, our collection offers high-quality, reliable
+                        accessories to meet your every need.</p>
+                </div>
+            </div>
+            
+            <div class="product">
+                <div class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/619AANS3KaL._SL1100_.jpg" alt="Computer Accessories">
+                </div>
+                <div class="product-content">
+                    <h2>Gaming Headset</h2>
+                    <p>Ant Esports H520W World Of Warships Edition Lightweight Gaming Over Ear Wired Headphones with
+                        Mic| 3.5MM Jack |50 MM Drivers | Compatible with PC/ PS4 / Xbox One / Nintendo / Mobile (Black)
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

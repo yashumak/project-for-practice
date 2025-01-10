@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>VIP Shop</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Shop</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        :root {
+            --white-clr: #fff;
+            --bg-purple: #23212e;
+            --text-purple: #f1f1f1;
+            --primary-purple: #9984ee;
+            --secondary-purple: #6f4ef4;
+        }
+
+        .product-Chamber {
+            background: var(--bg-purple);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 2rem;
+        }
+
+        .navbar {
+            display: flex;
+            height: 13vh;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            border-bottom: 1px solid var(--text-purple);
+        }
+
+        .navlist {
+            display: flex;
+            gap: 3.2rem;
+            list-style: none;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: var(--primary-purple);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        .navlist a {
+            color: var(--white-clr);
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-size: 18px;
+        }
+
+        .button {
+            background: var(--primary-purple);
+            border: none;
+            /* size: 12rem; */
+            color: var(--white-clr);
+            padding: .8rem 2rem;
+            border-radius: 5rem;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            transform: scale(1.02);
+        }
+
+        .category-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding: 2rem;
+            background: var(--bg-purple);
+            border-radius: 12px;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            /*  */
+        }
+
+        .category {
+            text-align: center;
+            color: var(--white-clr);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+        }
+
+        .category:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-icon {
+            background-color: var(--primary-purple);
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-icon img {
+            width: 50%;
+            height: auto;
+        }
+
+        .category h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 1rem;
+            }
+
+            .category-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .category-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .category h3 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-Chamber">
+        <nav class="navbar">
+            <a href="#" class="logo">VIP <span>Shop</span></a>
+            <ul class="navlist">
+                <li><a href="Home.html" class="links">Home</a></li>
+                <li><a href="Categories.html" class="links">Categories</a></li>
+                <li><a href="product.html" class="links">Product</a></li>
+                <li><a href="Profile.html" class="links">Profile</a></li>
+            </ul>
+            <a href="signup.html" class="button">Sign Up</a>
+
+        </nav>
+
+        <div class="category-container">
+
+            <a href="Laptop.html" class="category">
+                <div class="category-icon">
+                    <img src="https://img.icons8.com/?size=100&id=43629&format=png&color=000000" alt="Laptops">
+                </div>
+                <h3>Laptops</h3>
+            </a>
+
+            <a href="Gadgets.html" class="category">
+                <div class="category-icon">
+                    <img src="https://img.icons8.com/?size=100&id=48185&format=png&color=000000" alt="Fashion">
+                </div>
+                <h3>Gadgets</h3>
+            </a>
+
+            <a href="Accessories.html" class="category">
+                <div class="category-icon">
+                    <img src="https://img.icons8.com/?size=100&id=43614&format=png&color=000000////////////////" alt="Skincare">
+                </div>
+                <h3>Accessories</h3>
+            </a>
+
+            <a href="Headphone.html" class="category">
+                <div class="category-icon">
+                    <img src="https://img.icons8.com/?size=100&id=52979&format=png&color=000000" alt="EarPods">
+                </div>
+                <h3>Headphone</h3>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

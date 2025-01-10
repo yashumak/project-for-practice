@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>VIP Shop</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Shop</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        :root {
+            --white-clr: #fff;
+            --bg-purple: #23212e;
+            --text-purple: #f1f1f1;
+            --primary-purple: #9984ee;
+            --secondary-purple: #6f4ef4;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* background-color: #f9f9f9; */
+            background: var(--bg-purple);
+        }
+        
+        .product-Chamber {
+            background: var(--bg-purple);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 2rem;
+        }
+
+        .navbar {
+            display: flex;
+            height: 13vh;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            border-bottom: 1px solid var(--text-purple);
+        }
+
+        .navlist {
+            display: flex;
+            gap: 3.2rem;
+            list-style: none;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: var(--primary-purple);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        .navlist a {
+            color: var(--white-clr);
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+            font-size: 18px;
+        }
+
+        .button {
+            background: var(--primary-purple);
+            border: none;
+            /* size: 12rem; */
+            color: var(--white-clr);
+            padding: .8rem 2rem;
+            border-radius: 5rem;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            transform: scale(1.02);
+        }
+
+        .profile-page {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+
+        .sidebar {
+            width: 30%;
+            background: var(--primary-purple);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-picture img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .user-info h2 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .user-info p {
+            margin: 5px 0;
+            color: #000000;
+        }
+
+        .edit-profile {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--secondary-purple);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Right */
+        .main-content {
+            width: 70%;
+            padding: 20px;
+            background: var(--text-purple);
+        }
+
+        .main-content h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .profile-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .form-group {
+            width: calc(50% - 20px);
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .change-password {
+            margin-top: 10px;
+            padding: 8px 12px;
+            /* background-color: #3a9bfd; */
+            background: var(--secondary-purple);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .dob-section select {
+            width: calc(33% - 10px);
+            margin-right: 10px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .card {
+            background-color: #86ff6a;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .add-payment-method {
+            margin-top: 10px;
+            padding: 10px 15px;
+            /* background-color: #3a9bfd; */
+            background: var(--secondary-purple);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product-Chamber">
+        <nav class="navbar">
+            <a href="#" class="logo">VIP <span>Shop</span></a>
+            <ul class="navlist">
+                <li><a href="Home.html" class="links">Home</a></li>
+                <li><a href="Categories.html" class="links">Categories</a></li>
+                <li><a href="product.html" class="links">Product</a></li>
+                <li><a href="Profile.html" class="links">Profile</a></li>
+            </ul>
+            <a href="signup.html" class="button">Sign Up</a>
+        </nav>
+
+        <div class="profile-page">
+            <!-- Left Section (30%) -->
+            <aside class="sidebar">
+                <div class="profile-picture">
+                    <img src="https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/man5-512.png"
+                        alt="Profile Picture">
+                </div>
+                <div class="user-info">
+                    <h2>Yo Yo Gandhi</h2>
+                    <p class="email">gandhi.ratmeandhi@gmail.com</p>
+                    <p class="phone">Phone: 477-046-1827</p>
+                    <p class="address">MH-32 Wardha Sewagram, India</p>
+                    <button class="edit-profile">Edit Profile</button>
+                </div>
+            </aside>
+
+            <!-- Right Section (70%) -->
+            <main class="main-content">
+                <h2>Account Details</h2>
+                <form class="profile-form">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" placeholder="Yo Yo">
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Gandhi">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" value="password123">
+                        <button class="change-password">Change Password</button>
+                    </div>
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <div class="dob-section">
+                            <select>
+                                <option>Mondember</option>
+                            </select>
+                            <select>
+                                <option>32</option>
+                            </select>
+                            <select>
+                                <option>2530</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <select>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Gmale</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Language</label>
+                        <select>
+                            <option>English</option>
+                            <option>Marathi</option>
+                            <option>Hindi</option>
+                            <option>Telgu</option>
+                            <option>Malyalam</option>
+                            <option>Tamil</option>
+                            <option>Arebic</option>
+                            <option>Urdu</option>
+                            <option>Portugapl</option>
+                            <option>Spanish</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Method</label>
+                        <div class="cards">
+                            <div class="card">Visa .... 8314</div>
+                            <div class="card">Master .... 8314</div>
+                        </div>
+                        <button class="add-payment-method">Add Payment Method</button>
+                    </div>
+                </form>
+            </main>
+        </div>
+
+    </div>
+</body>
+
+</html>
