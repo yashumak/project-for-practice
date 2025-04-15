@@ -93,13 +93,10 @@ cd project-for-practice
 
  (e.g., Netflix, Portfolio, or VIP Shop) and open the .html files in your browser to view the projects.
 
-### 🖇️ Social Links
+## 🖇️ Social Links
 
-#### Yash Patil
+**Yash Umak**  
+- LinkedIn: [@yash-umak](https://www.linkedin.com/in/yash-umak-5242ab320/)  
+- GitHub: [@yashumak](https://github.com/yashumak)  
 
-LinkedIn: @yash-patil
 
-GitHub: @yashpatil
-
-### 🪪License
-This project is licensed under the MIT License. 
